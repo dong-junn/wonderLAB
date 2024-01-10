@@ -42,7 +42,7 @@ if selected_option is not None:
     module_info = main_UI.get(selected_option)  # .get() 메서드로 안전하게 딕셔너리 값을 추출
     if module_info:
         module_name = module_info["module"]
-        module = importlib.import_module(f'page.{module_name}')
+        module = importlib.import_module(f'page_py.{module_name}')
         page_function_name = f'{module_name}'
         page_function = getattr(module, page_function_name)
         page_function()  # 해당 페이지 함수 호출
