@@ -32,11 +32,6 @@ with st.sidebar:
             styles={**UI_style['styles']['sidebar']}
             
             )
-    with st.expander("JSON"):
-        json = option_menu(
-            '예시',
-            options=['다운로드']
-            )
 
 if selected_option is not None:
     module_info = main_UI.get(selected_option)  # .get() 메서드로 안전하게 딕셔너리 값을 추출
