@@ -1,0 +1,28 @@
+{
+    "pages": {
+        "협회소개": "association_introduction",
+        "프로젝트 소개": "project_introduction",
+        "사용자 정보 입력하기": "user_information",
+        "주제 정하기": "select_topic",
+        "프로젝트 진행하기": "project_progress",
+        "선택정보 보기": "dashboard",
+        "평가받기": "evaluation",
+        "인증서 발급하기": "certification",
+        "결과물 등록하기": "result_submission"
+    },
+
+    "sidebar": {
+        "style": {
+            "markdown": "<style>.st-emotion-cache-vk3wp9.eczjsme11 { width: 450px !important; }</style>",
+            "css": {
+                "container": {"padding": "5!important", "background-color": "#B5C4DB"},
+                "icon": {"color": "black", "font-size": "23px"},
+                "nav-link": {"color": "black", "font-size": "20px", "text-align": "left", "margin": "3px", "--hover-color": "#8F8F8F"},
+                "nav-link-selected": {"color": "black", "background-color": "#FCE44C"}
+            }
+        },
+        "name": "Wonder_LAB ",
+        "icons": ["house-fill"],  
+        "menu_icon": "chat-text-fill"  
+    }
+}
