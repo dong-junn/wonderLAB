@@ -5,6 +5,7 @@ import sys
 import os
 from streamlit_option_menu import option_menu
 
+
 # 현재 스크립트의 디렉토리 경로를 가져옵니다.
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(current_dir)  # 현재 디렉토리를 모듈 경로에 추가합니다.
@@ -13,28 +14,19 @@ sys.path.append(current_dir)  # 현재 디렉토리를 모듈 경로에 추가�
 with open('main.json', 'r', encoding='utf-8') as file:
     main_json = json.load(file)
 
-#json navigation management via variable
-name= main_json['sidebar']['name']
-options = list(main_json['pages'].keys())
-icons = main_json['sidebar']['icons']
-menu_icon = main_json['sidebar']['menu_icon']
-styles = {**main_json['sidebar']['style']['css']}
-
-sidebar_style= main_json['sidebar']['style']['markdown']
-
 # Sidebar 스타일 적용
-st.markdown(sidebar_style, unsafe_allow_html=True)
+st.markdown(main_json['sidebar']['style']['markdown'], unsafe_allow_html=True)
 
 # Sidebar 구성
 with st.sidebar:
     with st.expander("HOME", expanded=True):   
         selected_option = option_menu(
-            name,           
-            options= options,   
-            icons= icons, 
-            menu_icon= menu_icon,
+            main_json['sidebar']['name'],           
+            options= list(main_json['pages'].keys()),   
+            icons= main_json['sidebar']['icons'], 
+            menu_icon= main_json['sidebar']['menu_icon'],
             default_index=0,
-            styles= styles
+            styles= {**main_json['sidebar']['style']['css']}
         )
 
 

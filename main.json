@@ -1,14 +1,21 @@
 {
     "pages": {
         "협회소개": "association_introduction",
-        "프로젝트 소개": "project_introduction",
-        "사용자 정보 입력하기": "user_information",
-        "주제 정하기": "select_topic",
-        "프로젝트 진행하기": "project_progress",
-        "선택정보 보기": "dashboard",
-        "평가받기": "evaluation",
-        "인증서 발급하기": "certification",
-        "결과물 등록하기": "result_submission"
+        "프로그램 소개와 혜택": "project_introduction",
+        "사용자 정보 입력": "user_information",
+
+        "주제 설정": "select_topic",
+        "AI 구현 설계": "project_progress",
+        "효율성 판단지표 생성": "ex",
+        "DATASET 실습": "dataset_1",
+
+        "AI 모델 생성": "AI_model",
+        "AI 적용 시뮬레이션": "apply_ai",
+        "나의 프로젝트 정보": "dashboard",
+        "평가서 제출": "evaluation_submit",
+        "인증서 발급": "certification",
+        "결과물 등록": "result_submission"
+
     },
 
     "sidebar": {
