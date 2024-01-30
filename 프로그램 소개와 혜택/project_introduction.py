@@ -19,7 +19,7 @@ def page():
 
     st.markdown(mark_style, unsafe_allow_html=True)
 
-    st.link_button(":rainbow[TWD로 이동하기]", "https://twd.can-ai.org/reports/")
+
     st.title(":green[프로젝트 개요]")
     st.subheader("제목: 인공지능의 실용적 적용과 통합 능력")
     st.subheader("목적: 참가자들에게 일반적 업무, 연구.실험 일상의 문제 해결, 소프트웨어 개발 등 다양한 분야에서 인공지능을 통합하고 적용 하는데 필요한 기술과 방법 제공")
@@ -73,3 +73,5 @@ def page():
     st.subheader("•인공지능 모델 발굴 능력 갖춤: 기존의 업무 및 방식에서 인공지능을 어떤 업무과정에 어떠한 인공지능 모델을 적용할 수 있는지 발굴하는 능력을 갖추었음")
     st.subheader("•인공지능 솔루션 설계 능력 갖춤: 기존 업무를 기반으로 인공지능 솔루션을 적용하고 설계할 수 있는 능력을 갖추었음")
     st.subheader("•효율성 계산 능력 갖춤: 인공지능이 특정 문제를 해결하거나 업무의 시간 및 비용 대비 높은 효율성을 계산할 수 있는 능력을 갖추었음")
+
+    st.link_button(":rainbow[TWD로 이동하기]", "https://twd.can-ai.org/reports/")

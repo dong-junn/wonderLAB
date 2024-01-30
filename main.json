@@ -2,6 +2,7 @@
     "pages": {
         "협회소개": "association_introduction",
         "프로그램 소개와 혜택": "project_introduction",
+        "프로젝트 샘플보기" : "proj_sample",
         "사용자 정보 입력": "user_information",
 
         "주제 설정": "select_topic",

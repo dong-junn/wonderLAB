@@ -31,13 +31,16 @@ def page():
     - 인증서 발급은 참가자들이 이 프로그램을 통해 얻은 경험과 성취를 공식적으로 인정하고, 그들의 전문성을 강조하는 수단으로 활용됩니다.
     """)
 
-    st.subheader("평가 제출")
-    st.text_input("참가자 이름")
-    st.file_uploader("프로젝트 결과 보고서 업로드", type=['pdf', 'docx'])
-    st.button("제출")
+
+    #st.subheader("평가 제출")
+    #st.text_input("참가자 이름")
+    #st.file_uploader("프로젝트 결과 보고서 업로드", type=['pdf', 'docx'])
+    #st.button("제출")"""
 
 
-    st.title("dataset 실습")
+
+
+
     st.subheader("문제 발굴 및 AI를 문제 해결 도구로 적용(25점)")
     st.subheader(
         "수많은 생활, 업무, 연구, 학교학습에서 어떤 문제를 인공지능의 핵심기능으로 해결할 수 있는지 발굴 하였나요?")
