@@ -2,11 +2,6 @@ import streamlit as st
 from PIL import Image
 
 def page():
-    tem1 = Image.open("images/AI구현설계_1.png")
-    st.image(tem1)
-
-
-    """
     st.title("프로젝트 진행")
 
     st.subheader("STEP1: 기존 업무 단계를 입력해주세요")
@@ -43,6 +38,5 @@ def page():
     st.write("1단계 입력: ", step_1)
     st.write("2단계 입력: ", step3)
     st.write("3단계 입력: ", step4)
-    """
     
 

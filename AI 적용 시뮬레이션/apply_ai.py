@@ -8,22 +8,7 @@ def page():
 
     st.markdown("질문 1: 'AI wonder'에서 데이터셋을 업로드하셨나요?")
     st.checkbox(" '데이터 수집' 페이지를 클릭했습니다.", key="clicked_data_collection_page")
-    difficulty_clicked_data_collection_page = st.checkbox("아니요, 어려움이 있습니다.",
-                                                          key="difficulty_clicked_data_collection_page")
-    if difficulty_clicked_data_collection_page:
-        message("'데이터 수집' 페이지 접근에 대한 어려움을 설명해주세요.", key="message_clicked_data_collection_page")
-        message("사용자 입력", is_user=True, key="user_input_clicked_data_collection_page")
-        with st.container():
-            st.text_input("어려움을 자세히 설명해주세요", key="text_input_clicked_data_collection_page")
-
     st.checkbox(" '파일찾아보기' 버튼을 눌러 저장한 파일을 업로드했습니다.", key="uploaded_file")
-    difficulty_uploaded_file = st.checkbox("아니요, 어려움이 있습니다.", key="difficulty_uploaded_file")
-    if difficulty_uploaded_file:
-        message("파일 업로드에 대한 어려움을 설명해주세요.", key="message_uploaded_file")
-        message("사용자 입력", is_user=True, key="user_input_uploaded_file")
-        with st.container():
-            st.text_input("어려움을 자세히 설명해주세요", key="text_input_uploaded_file")
-
     st.checkbox(" 페이지 하단에서 업로드된 데이터셋이 정상적으로 보이는지 확인했습니다.", key="checked_uploaded_dataset")
     difficulty_checked_uploaded_dataset = st.checkbox("아니요, 어려움이 있습니다.", key="difficulty_checked_uploaded_dataset")
     if difficulty_checked_uploaded_dataset:
@@ -34,22 +19,9 @@ def page():
 
     st.markdown("질문 2: 데이터셋에 대한 분석을 수행하셨나요?")
     st.checkbox(" '데이터 분석' 버튼을 클릭했습니다.", key="clicked_data_analysis")
-    difficulty_clicked_data_analysis = st.checkbox("아니요, 어려움이 있습니다.", key="difficulty_clicked_data_analysis")
-    if difficulty_clicked_data_analysis:
-        message("데이터 분석 시작에 대한 어려움을 설명해주세요.", key="message_clicked_data_analysis")
-        message("사용자 입력", is_user=True, key="user_input_clicked_data_analysis")
-        with st.container():
-            st.text_input("어려움을 자세히 설명해주세요", key="text_input_clicked_data_analysis")
-
     st.checkbox(" '추가 탐사 준비' 섹션에서 관심 있는 열을 선택하여 Target 변수를 지정했습니다.", key="selected_target_variable")
-    difficulty_selected_target_variable = st.checkbox("아니요, 어려움이 있습니다.", key="difficulty_selected_target_variable")
-    if difficulty_selected_target_variable:
-        message("Target 변수 선택에 대한 어려움을 설명해주세요.", key="message_selected_target_variable")
-        message("사용자 입력", is_user=True, key="user_input_selected_target_variable")
-        with st.container():
-            st.text_input("어려움을 자세히 설명해주세요", key="text_input_selected_target_variable")
-
     st.checkbox(" 타겟 변수와 다른 변수들 간의 상관관계 매트릭스를 확인했습니다.", key="checked_correlation_matrix")
+
     difficulty_checked_correlation_matrix = st.checkbox("아니요, 어려움이 있습니다.", key="difficulty_checked_correlation_matrix")
     if difficulty_checked_correlation_matrix:
         message("상관관계 매트릭스 확인에 대한 어려움을 설명해주세요.", key="message_checked_correlation_matrix")
@@ -62,30 +34,8 @@ def page():
 
     st.markdown("질문 3: 타겟 변수를 예측하는 모델을 만들기 위한 준비를 하셨나요?")
     st.checkbox(" '모델 빌딩' 버튼을 클릭했습니다.", key="clicked_model_building")
-    difficulty_clicked_model_building = st.checkbox("아니요, 어려움이 있습니다.", key="difficulty_clicked_model_building")
-    if difficulty_clicked_model_building:
-        message("모델 빌딩 시작에 대한 어려움을 설명해주세요.", key="message_clicked_model_building")
-        message("사용자 입력", is_user=True, key="user_input_clicked_model_building")
-        with st.container():
-            st.text_input("어려움을 자세히 설명해주세요", key="text_input_clicked_model_building")
-
     st.checkbox(" '타겟 컬럼'에서 예측하고자 하는 타겟 변수를 선택했습니다.", key="selected_target_column")
-    difficulty_selected_target_column = st.checkbox("아니요, 어려움이 있습니다.", key="difficulty_selected_target_column")
-    if difficulty_selected_target_column:
-        message("타겟 컬럼 선택에 대한 어려움을 설명해주세요.", key="message_selected_target_column")
-        message("사용자 입력", is_user=True, key="user_input_selected_target_column")
-        with st.container():
-            st.text_input("어려움을 자세히 설명해주세요", key="text_input_selected_target_column")
-
     st.checkbox(" '마술을 해 보셔요' 버튼을 클릭하여 모델 생성을 시작했습니다.", key="clicked_start_model_creation")
-    difficulty_clicked_start_model_creation = st.checkbox("아니요, 어려움이 있습니다.",
-                                                          key="difficulty_clicked_start_model_creation")
-    if difficulty_clicked_start_model_creation:
-        message("모델 생성 시작에 대한 어려움을 설명해주세요.", key="message_clicked_start_model_creation")
-        message("사용자 입력", is_user=True, key="user_input_clicked_start_model_creation")
-        with st.container():
-            st.text_input("어려움을 자세히 설명해주세요", key="text_input_clicked_start_model_creation")
-
     st.checkbox(" 모델 생성이 완료될 때까지 30초에서 1분 정도 기다렸습니다.", key="waited_for_model_creation")
     difficulty_waited_for_model_creation = st.checkbox("아니요, 어려움이 있습니다.", key="difficulty_waited_for_model_creation")
     if difficulty_waited_for_model_creation:
@@ -111,13 +61,7 @@ def page():
 
     st.markdown("질문 5: 예측을 위한 방식을 선택하셨나요?")
     st.checkbox(" 왼쪽 사이드 메뉴에서 '어떻게 예측하시겠습니까?' 섹션을 찾았습니다.", key="found_prediction_method_section")
-    difficulty_found_prediction_method_section = st.checkbox("아니요, 어려움이 있습니다.",
-                                                             key="difficulty_found_prediction_method_section")
-    if difficulty_found_prediction_method_section:
-        message("'어떻게 예측하시겠습니까?' 섹션 찾기에 대한 어려움을 설명해주세요.", key="message_found_prediction_method_section")
-        message("사용자 입력", is_user=True, key="user_input_found_prediction_method_section")
-        with st.container():
-            st.text_input("어려움을 자세히 설명해주세요", key="text_input_found_prediction_method_section")
+
 
     st.checkbox(" 나타나는 선택사항 중에서 '온라인'을 선택했습니다.", key="selected_online_option")
     difficulty_selected_online_option = st.checkbox("아니요, 어려움이 있습니다.", key="difficulty_selected_online_option")
@@ -132,12 +76,6 @@ def page():
 
     st.markdown("질문 6: 가상의 웹앱에 필요한 입력값을 준비하셨나요?")
     st.checkbox("오른쪽에 나타난 입력창에서, 인공지능 모델에 적용할 모든 입력값을 준비했습니다.", key="prepared_all_input_values")
-    difficulty_prepared_all_input_values = st.checkbox("아니요, 어려움이 있습니다.", key="difficulty_prepared_all_input_values")
-    if difficulty_prepared_all_input_values:
-        message("모든 입력값 준비에 대한 어려움을 설명해주세요.", key="message_prepared_all_input_values")
-        message("사용자 입력", is_user=True, key="user_input_prepared_all_input_values")
-        with st.container():
-            st.text_input("어려움을 자세히 설명해주세요", key="text_input_prepared_all_input_values")
 
     st.checkbox("가상의 웹앱에 모든 필요한 입력값을 채웠습니다.", key="filled_all_input_values")
     difficulty_filled_all_input_values = st.checkbox("아니요, 어려움이 있습니다.", key="difficulty_filled_all_input_values")
@@ -152,13 +90,6 @@ def page():
 
     st.markdown("질문 7: 모델을 테스트하여 예측을 수행하셨나요?")
     st.checkbox(" '예측하다' 버튼을 클릭하여 모델 테스트를 진행했습니다.", key="clicked_predict_button")
-    difficulty_clicked_predict_button = st.checkbox("아니요, 어려움이 있습니다.", key="difficulty_clicked_predict_button")
-    if difficulty_clicked_predict_button:
-        message("모델 테스트 진행에 대한 어려움을 설명해주세요.", key="message_clicked_predict_button")
-        message("사용자 입력", is_user=True, key="user_input_clicked_predict_button")
-        with st.container():
-            st.text_input("어려움을 자세히 설명해주세요", key="text_input_clicked_predict_button")
-
     st.checkbox(" 테스트 결과가 성공적으로 산출되었습니다.", key="successful_test_result")
     difficulty_successful_test_result = st.checkbox("아니요, 어려움이 있습니다.", key="difficulty_successful_test_result")
     if difficulty_successful_test_result:

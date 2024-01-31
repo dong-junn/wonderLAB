@@ -32,15 +32,15 @@ def page():
     """)
 
 
-    #st.subheader("평가 제출")
-    #st.text_input("참가자 이름")
-    #st.file_uploader("프로젝트 결과 보고서 업로드", type=['pdf', 'docx'])
-    #st.button("제출")"""
+    st.subheader("평가 제출")
+    st.text_input("참가자 이름")
+    st.file_uploader("제출하기", type=['pdf', 'docx'])
+    st.button("제출")
 
 
 
 
-
+    '''
     st.subheader("문제 발굴 및 AI를 문제 해결 도구로 적용(25점)")
     st.subheader(
         "수많은 생활, 업무, 연구, 학교학습에서 어떤 문제를 인공지능의 핵심기능으로 해결할 수 있는지 발굴 하였나요?")
@@ -106,4 +106,4 @@ def page():
     </style>
     """
 
-    st.markdown(mark_style, unsafe_allow_html=True)
+    st.markdown(mark_style, unsafe_allow_html=True)'''

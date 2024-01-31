@@ -9,13 +9,6 @@ def page():
 
     st.markdown("질문 1: 'AI wonder' 웹사이트에 접속하셨나요?")
     st.checkbox("예, 구글 크롬을 사용하여 www.ai-wonder.com에 접속했습니다.")
-    st1 = st.checkbox("아니요, 어려움이 있습니다.")
-    if st1:
-        message("")
-        message("", is_user=True)
-        with st.container():
-            st.text_input("GPT")
-
     st.checkbox("예, 페이지를 한국어로 번역했습니다.")
     st2 = st.checkbox("아니요, 어려움이 있습니다.", key="checkbox1")
     if st2:
@@ -48,12 +41,7 @@ def page():
     st.subheader("2. 업로드된 데이터셋 확인")
     st.markdown("질문 4: 업로드된 데이터셋이 정상적으로 표시되는지 확인하셨나요?")
     st.checkbox("예, 페이지 하단으로 스크롤하여 업로드된 데이터셋을 확인했습니다.", key="scroll_down_uploaded_dataset")
-    difficulty_uploaded_dataset_display = st.checkbox("아니요, 어려움이 있습니다.", key="difficulty_uploaded_dataset_display")
-    if difficulty_uploaded_dataset_display:
-        message("업로드된 데이터셋 표시 확인에 대한 어려움을 설명해주세요.", key="message_uploaded_dataset_display")
-        message("사용자 입력", is_user=True, key="user_input_uploaded_dataset_display")
-        with st.container():
-            st.text_input("어려움을 자세히 설명해주세요", key="text_input_uploaded_dataset_display")
+
     st.checkbox("예, 모든 필요한 열과 데이터가 올바르게 나타나는지 검토했습니다.", key="review_uploaded_dataset_columns")
 
     difficulty_review_uploaded_dataset_columns = st.checkbox("아니요, 어려움이 있습니다.", key= "difficulty_review_uploaded_dataset_columns")
