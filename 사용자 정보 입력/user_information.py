@@ -13,57 +13,76 @@ def page():
     with open(json_file_path, 'r', encoding='utf-8') as file:
         user_info = json.load(file)
 
-    # 1. 사용자 AI 수준 선택
-    ai_level = st.selectbox(
-        user_info['ai_level']['description'],
-        user_info['ai_level']['user']
+    # 사용자 AI 수준 선택
+    ai_level_options = ('초심자', '데이터 보유자', '개발자')
+    if '1' not in st.session_state:
+        st.session_state['1'] = ai_level_options[0]
+
+    st.session_state['1']=st.selectbox(
+        "당신은 누구인가요?",
+        ai_level_options,
+        index=ai_level_options.index(st.session_state['1']),
+        key='ai_level',
+        
     )
+    # 신분 선택
+    if st.session_state['1'] in user_info['ai_level']['user']:
+        status_options = list(user_info['ai_level']['user'][st.session_state['1']])
 
+        if 'activity_field' not in st.session_state or st.session_state.activity_field not in status_options:
+            st.session_state.activity_field = status_options[0]
 
-
-    # 2. 신분 선택
-    if ai_level in user_info['ai_level']['user']:
-        status_options = list(user_info['ai_level']['user'][ai_level].keys())
-        activity_field = st.selectbox(
-            '신분을 선택하세요',
-            status_options
-        )
-
-    if activity_field != '학생':
         st.selectbox(
-        '경력을 선택해주세요',
-        ('~5년', '5~10년', '10~20년')
+            '신분을 선택하세요',
+            status_options,
+            index=status_options.index(
+                st.session_state.activity_field) if st.session_state.activity_field in status_options else 0,
+            key='activity_field'
         )
 
-    if activity_field == '학생':
-        # 학생인 경우, 세부 신분 선택
-        student_status_options = list(user_info['ai_level']['user'][ai_level]['학생'].keys())
-        detailed_student_status = st.selectbox(
+    # 3. 경력 선택 (학생이 아닌 경우)
+    if st.session_state.get('activity_field', '') != '학생':
+        career_options = ('~5년', '5~10년', '10~20년')
+        st.selectbox(
+            '경력을 선택해주세요',
+            career_options,
+            index=career_options.index(
+                st.session_state.career) if 'career' in st.session_state and st.session_state.career in career_options else 0,
+            key='career'
+        )
+
+    # 4. 세부 신분 선택 (학생인 경우)
+    if st.session_state.get('activity_field', '') == '학생':
+        student_status_options = list(user_info['ai_level']['user'][st.session_state.ai_level]['학생'].keys())
+        st.selectbox(
             "학생이시군요, 자세한 신분을 알려주세요",
-            student_status_options
+            student_status_options,
+            index=student_status_options.index(
+                st.session_state.detailed_student_status) if 'detailed_student_status' in st.session_state and st.session_state.detailed_student_status in student_status_options else 0,
+            key='detailed_student_status'
         )
 
-    # 3. 목적 선택
-    if ai_level in user_info['ai_level']['user']:
-        purpose_options = []
-        if activity_field == '학생' and detailed_student_status:
-            # 학생의 세부 신분에 따른 목적 선택
-            purpose_options = user_info['ai_level']['user'][ai_level]['학생'][detailed_student_status]
-        elif activity_field in user_info['ai_level']['user'][ai_level]:
-            # 일반 신분에 따른 목적 선택
-            purpose_options = user_info['ai_level']['user'][ai_level][activity_field]
+    # 5. 목적 선택
+    purpose_options = []
+    if st.session_state.ai_level in user_info['ai_level']['user']:
+        if st.session_state.get('activity_field', '') == '학생' and 'detailed_student_status' in st.session_state:
+            purpose_options = user_info['ai_level']['user'][st.session_state.ai_level]['학생'][
+                st.session_state.detailed_student_status]
+        elif st.session_state.activity_field in user_info['ai_level']['user'][st.session_state.ai_level]:
+            purpose_options = user_info['ai_level']['user'][st.session_state.ai_level][st.session_state.activity_field]
 
-        selected_purposes = st.multiselect(
+        st.multiselect(
             'AI를 적용하려는 목적을 선택하세요',
-            purpose_options
+            purpose_options,
+            default=[purpose for purpose in st.session_state.get('selected_purposes', []) if
+                     purpose in purpose_options],
+            key='selected_purposes'
         )
 
-    selected_purposes_str = ', '.join(selected_purposes)
+    # Displaying the selected purposes
+    st.session_state.selected_purposes_str = ', '.join(st.session_state.get('selected_purposes', []))
     st.write("-----")
-    st.subheader(f"1. AI습득 정도 선택 : {ai_level}")
-    st.subheader(f"2. 신분 선택 : {activity_field}")
-    st.subheader(f"3. 목적 선택 : {selected_purposes_str}")
-
-
-
+    st.subheader(f"1. AI습득 정도 선택 : {st.session_state.ai_level}")
+    st.subheader(f"2. 신분 선택 : {st.session_state.get('activity_field', '정보 없음')}")
+    st.subheader(f"3. 목적 선택 : {st.session_state.selected_purposes_str}")
 

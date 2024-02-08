@@ -10,12 +10,12 @@
         "효율성 판단지표 생성": "ex",
         "DATASET 실습": "dataset_1",
 
-        "AI 모델 생성": "AI_model",
+        "AI 모델 생성": "modified_AI_model",
         "AI 적용 시뮬레이션": "apply_ai",
         "나의 프로젝트 정보": "dashboard",
-        "평가서 제출": "evaluation_submit",
-        "인증서 발급": "certification",
-        "결과물 등록": "result_submission"
+        "심사 자료 제출": "evaluation_submit",
+        "인증서 발급": "certification"
+
 
     },
 
