@@ -2,9 +2,9 @@ import os
 import streamlit as st
 from PIL import Image
 
+
+
 def page():
-
-
     mark_style = """
     <body>
     <header>
@@ -47,14 +47,14 @@ def page():
             padding: 0;
             color: #333;
         }
-
+    
         header {
             background: #0056b3;
             color: #fff;
             padding: 1rem 0;
             text-align: center;
         }
-
+    
         header h1 {
             margin: 0;
         }
@@ -66,7 +66,7 @@ def page():
             padding: 20px;
             
         }
-
+    
         section {
             margin-bottom: 20px;
             padding: 20px;
@@ -94,11 +94,11 @@ def page():
             background: gray;
         }
         
-
+    
         h2 {
             color: #69dc8f;
         }
-
+    
         footer {
             text-align: center;
             padding: 1rem 0;
@@ -114,12 +114,12 @@ def page():
             width: 200px;
             height: auto;
         }
-
+    
         @media screen and (max-width: 600px) {
             body {
                 padding: 5px;
             }
-
+    
             section {
                 padding: 10px;
             }
