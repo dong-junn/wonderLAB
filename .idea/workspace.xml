@@ -5,30 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61f8df3d-b051-40de-9a6a-4699e7891880" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/프로젝트 신청하기/user_information.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wonder_LAB-dev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wonder_LAB-dev.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.streamlit/config.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI 구현 설계/project_progress.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI 적용 시뮬레이션/apply_ai.py" beforeDir="false" afterPath="$PROJECT_DIR$/AI 적용 시뮬레이션/apply_ai.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DATASET 실습/dataset_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DATASET 작성 실습(삭제)/dataset.json" beforeDir="false" afterPath="$PROJECT_DIR$/데이터 셋 연습/dataset.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DATASET 작성 실습(삭제)/dataset_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.json" beforeDir="false" afterPath="$PROJECT_DIR$/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AI 모델 생성/aiModeling.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AI 모델 생성/aiModeling.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AI 적용 시뮬레이션/aiSimulation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AI 적용 시뮬레이션/aiSimulation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/효율성 판단지표 생성/efficiency_metric.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI 모델 생성/AI_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI 모델 생성/modified_AI_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI 적용 시뮬레이션/apply_ai.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/나의 프로젝트 정보/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/나의 프로젝트 정보/dashboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/사용자 정보 입력/user_information.json" beforeDir="false" afterPath="$PROJECT_DIR$/프로젝트 신청하기/user_information.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/사용자 정보 입력/user_information.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/주제 설정/select_topic.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/주제 설정/select_topic.py" beforeDir="false" afterPath="$PROJECT_DIR$/주제 설정/select_topic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/평가서 제출/evaluation_submit.py" beforeDir="false" afterPath="$PROJECT_DIR$/심사 자료 제출/evaluation_submit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/프로그램 소개와 혜택/project_introduction.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/프로젝트 샘플보기/proj_sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/프로젝트 샘플보기/proj_sample.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/협회소개/association_introduction.py" beforeDir="false" afterPath="$PROJECT_DIR$/협회소개/association_introduction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/효율성 판단지표 생성/ex.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/데이터 셋 연습/dataset.json" beforeDir="false" afterPath="$PROJECT_DIR$/데이터 셋 연습/dataset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/데이터 셋 연습/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/데이터 셋 연습/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/효율성 판단지표 생성/efficiency_metric.py" beforeDir="false" afterPath="$PROJECT_DIR$/효율성 판단지표 생성/efficiency_metric.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +53,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/wonderLAB/json_navi/wonderLAB&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -100,6 +90,14 @@
       <workItem from="1707982112190" duration="22096000" />
       <workItem from="1708046349112" duration="6113000" />
       <workItem from="1708054694074" duration="1513000" />
+      <workItem from="1708198991006" duration="1456000" />
+      <workItem from="1708249475154" duration="5377000" />
+      <workItem from="1708270999719" duration="35000" />
+      <workItem from="1708271042266" duration="21384000" />
+      <workItem from="1708333025386" duration="20000" />
+      <workItem from="1708333053445" duration="12738000" />
+      <workItem from="1708374333574" duration="3242000" />
+      <workItem from="1708441151043" duration="1754000" />
     </task>
     <servers />
   </component>

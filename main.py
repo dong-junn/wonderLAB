@@ -124,11 +124,11 @@ if 'page' in st.session_state:
 
 
     elif st.session_state.page == 10:
-        module = importlib.import_module('AI 모델 생성.modified_AI_model')
+        module = importlib.import_module('AI 모델 생성.aiModeling')
         module.page()
 
     elif st.session_state.page == 11:
-        module = importlib.import_module('AI 적용 시뮬레이션.apply_ai')
+        module = importlib.import_module('AI 적용 시뮬레이션.aiSimulation')
         module.page()
 
     # My 정보
@@ -153,77 +153,77 @@ else:
 
 # session state 초기화
 # 사용자 입력
-if 'ai_level_selection' not in st.session_state:
-    st.session_state['ai_level_selection'] = '초심자'
-
-if 'ai_level' not in st.session_state:
-    st.session_state['ai_level'] = '초심자'  # Assuming default selection
-
-if 'activity_field' not in st.session_state:
-    st.session_state['activity_field'] = '직장인'
-
-if 'career' not in st.session_state:
-    st.session_state['career'] = '~5년'
-
-if 'detailed_student_status' not in st.session_state:
-    st.session_state['detailed_student_status'] = ''
-
-if 'selected_purposes' not in st.session_state:
-    st.session_state['selected_purposes'] = []
-
-st.session_state.selected_purposes_str = ', '.join(st.session_state.get('selected_purposes', []))
+# if 'ai_level_selection' not in st.session_state:
+#     st.session_state['ai_level_selection'] = '초심자'
 #
-# # 주제 설정
-if 'purpose1' not in st.session_state:
-    st.session_state['purpose1'] = '강점강화'
-
-if 'purpose2' not in st.session_state:
-    st.session_state['purpose2'] = '오류 개선'
-
-if 'work_typ' not in st.session_state:
-    st.session_state['work_typ'] = '데이터로 정보를 받고 대응하는 업무'
-
-if 'task_order' not in st.session_state:
-    st.session_state['task_order'] = '업무를 모두 직접 진행'
-
-if 'core_function' not in st.session_state:
-    st.session_state['core_function'] = '예측이 필요하거나 가능한 업무'
-
-if 'ai_advantages' not in st.session_state:
-    st.session_state['ai_advantages'] = '시간 대비 생산성 향상'
+# if 'ai_level' not in st.session_state:
+#     st.session_state['ai_level'] = '초심자'  # Assuming default selection
 #
-# # AI 구현 설계
-for step in ['step3', 'step4']:
-    if step not in st.session_state:
-        st.session_state[step] = "분류(개/고양이 구분)" if step == 'step3' else "기본 업무 단계 시각화"
+# if 'activity_field' not in st.session_state:
+#     st.session_state['activity_field'] = '직장인'
 #
-# # 효율성 판단지표
-if 'time_change' not in st.session_state:  # session_state 초기화
-    st.session_state['time_change'] = ''
-
-if 'input_before_time' not in st.session_state:  # session_state 초기화
-    st.session_state['input_before_time'] = ''
-
-if 'quality_impact' not in st.session_state:
-    st.session_state['quality_impact'] = "상당히 향상"
-
-if 'quality_measurement' not in st.session_state:
-    st.session_state['quality_measurement'] = "고객 만족도"
-
-if 'staff_change' not in st.session_state:
-    st.session_state['staff_change'] = "감소"
-
-if 'staff_management' not in st.session_state:
-    st.session_state['staff_management'] = "재교육 및 재배치"
-
-if 'procedure_impact' not in st.session_state:
-    st.session_state['procedure_impact'] = "상당히 간소화"
-
-if 'procedure_evaluation' not in st.session_state:
-    st.session_state['procedure_evaluation'] = "처리 시간 단축"
-
-if '1' not in st.session_state:
-    st.session_state['1'] = ""
+# if 'career' not in st.session_state:
+#     st.session_state['career'] = '~5년'
+#
+# if 'detailed_student_status' not in st.session_state:
+#     st.session_state['detailed_student_status'] = ''
+#
+# if 'selected_purposes' not in st.session_state:
+#     st.session_state['selected_purposes'] = []
+#
+# st.session_state.selected_purposes_str = ', '.join(st.session_state.get('selected_purposes', []))
+# #
+# # # 주제 설정
+# if 'purpose1' not in st.session_state:
+#     st.session_state['purpose1'] = '강점강화'
+#
+# if 'purpose2' not in st.session_state:
+#     st.session_state['purpose2'] = '오류 개선'
+#
+# if 'work_typ' not in st.session_state:
+#     st.session_state['work_typ'] = '데이터로 정보를 받고 대응하는 업무'
+#
+# if 'task_order' not in st.session_state:
+#     st.session_state['task_order'] = '업무를 모두 직접 진행'
+#
+# if 'core_function' not in st.session_state:
+#     st.session_state['core_function'] = '예측이 필요하거나 가능한 업무'
+#
+# if 'ai_advantages' not in st.session_state:
+#     st.session_state['ai_advantages'] = '시간 대비 생산성 향상'
+# #
+# # # AI 구현 설계
+# for step in ['step3', 'step4']:
+#     if step not in st.session_state:
+#         st.session_state[step] = "분류(개/고양이 구분)" if step == 'step3' else "기본 업무 단계 시각화"
+# #
+# # # 효율성 판단지표
+# if 'time_change' not in st.session_state:  # session_state 초기화
+#     st.session_state['time_change'] = ''
+#
+# if 'input_before_time' not in st.session_state:  # session_state 초기화
+#     st.session_state['input_before_time'] = ''
+#
+# if 'quality_impact' not in st.session_state:
+#     st.session_state['quality_impact'] = "상당히 향상"
+#
+# if 'quality_measurement' not in st.session_state:
+#     st.session_state['quality_measurement'] = "고객 만족도"
+#
+# if 'staff_change' not in st.session_state:
+#     st.session_state['staff_change'] = "감소"
+#
+# if 'staff_management' not in st.session_state:
+#     st.session_state['staff_management'] = "재교육 및 재배치"
+#
+# if 'procedure_impact' not in st.session_state:
+#     st.session_state['procedure_impact'] = "상당히 간소화"
+#
+# if 'procedure_evaluation' not in st.session_state:
+#     st.session_state['procedure_evaluation'] = "처리 시간 단축"
+#
+# if '1' not in st.session_state:
+#     st.session_state['1'] = ""
 
 
 

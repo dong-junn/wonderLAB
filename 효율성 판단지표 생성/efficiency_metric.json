@@ -1,0 +1,31 @@
+{
+  "step1": {
+    "before": "도입 전",
+    "after": "도입 후"
+  },
+
+  "step2": {
+    "before": "전용 전 시간",
+    "after": "적용 후 시간"
+  },
+
+  "step3": {
+    "before": "도입 전 비용",
+    "after": "도입 후 비용"
+  },
+
+  "step4": {
+    "selectbox_label": "품질 영향 선택",
+    "option": ["상당히 향상", "약간 향상", "변화 없음", "저하"]
+  },
+
+  "step5": {
+    "selectbox_label": "품질 변화 측정 지표 선택",
+    "option": ["고객 만족도", "오류율 감소", "처리 속도"]
+  },
+
+  "step6": {
+    "selectbox_label": "인력 수 변화 선택",
+    "option": ["감소", "동일", "증가"]
+  }
+}
